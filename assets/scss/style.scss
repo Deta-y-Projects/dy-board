@@ -1,19 +1,49 @@
 .home-section {
 	position: relative;
-	background: #E4E9F7;
+	background: var(--bg);
 	min-height: 100vh;
 	top: 0;
 	left: 78px;
 	width: calc(100% - 78px);
 	transition: all 0.5s ease;
 	z-index: 2;
-	.text {
-		display: inline-block;
-		color:var(--grun-100);
-		font-size: 25px;
-		font-weight: 500;
-		margin: 18px;
-	}
+    .topBar {
+        background: var(--white);
+        height: 74px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .text {
+            display: inline-block;
+            color:var(--grun-100);
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 18px;
+        }
+        .breadcrumbs {
+            ul {
+                margin: 0 18px;
+                li {
+                    display: inline;
+                    font-size: 16px;
+                    a {
+                        color: var(--gray-600);
+                        font-weight: 600;
+                    }
+                    &:after {
+                        content: '/';
+                        padding-left: 5px;
+                    }
+                    &:last-child{
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+	
 }
 .sidebar.open~.home-section {
 	left: 250px;

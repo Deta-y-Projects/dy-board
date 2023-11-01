@@ -1,7 +1,6 @@
-$font-family_1: "Poppins", sans-serif;
+$font-family_1: "Outfit", sans-serif;
 
-/* Google Font Link */
-@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
+
 * {
 	margin: 0;
 	padding: 0;
@@ -23,6 +22,10 @@ $font-family_1: "Poppins", sans-serif;
 		display: flex;
 		align-items: center;
 		position: relative;
+		img {
+			opacity: 0;
+			transition: all 0.5s ease;
+		}
 		.icon {
 			opacity: 0;
 			transition: all 0.5s ease;
@@ -32,7 +35,7 @@ $font-family_1: "Poppins", sans-serif;
 			font-size: 20px;
 			font-weight: 600;
 			opacity: 0;
-			transition: all 0.5s ease;
+			transition: all 0.1s ease;
 		}
 		#btn {
 			position: absolute;
@@ -110,8 +113,10 @@ $font-family_1: "Poppins", sans-serif;
 			}
 			.links_name {
 				color: var(--white);
-				font-size: 15px;
-				font-weight: 400;
+				font-size: 16px;
+				font-weight: 500;
+				letter-spacing: 0.7px;
+				text-transform: capitalize;
 				white-space: nowrap;
 				opacity: 0;
 				pointer-events: none;
@@ -214,6 +219,10 @@ $font-family_1: "Poppins", sans-serif;
 .sidebar.open {
 	width: 250px;
 	.logo-details {
+		img {
+			opacity: 1;
+			padding-right: 10px;
+		}
 		.icon {
 			opacity: 1;
 		}

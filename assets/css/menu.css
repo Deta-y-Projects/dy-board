@@ -1,10 +1,8 @@
-/* Google Font Link */
-@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .sidebar {
@@ -24,6 +22,10 @@
   align-items: center;
   position: relative;
 }
+.sidebar .logo-details img {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
 .sidebar .logo-details .icon {
   opacity: 0;
   transition: all 0.5s ease;
@@ -33,7 +35,7 @@
   font-size: 20px;
   font-weight: 600;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 .sidebar .logo-details #btn {
   position: absolute;
@@ -110,8 +112,10 @@
 }
 .sidebar li a .links_name {
   color: var(--white);
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  text-transform: capitalize;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -213,6 +217,10 @@
 
 .sidebar.open {
   width: 250px;
+}
+.sidebar.open .logo-details img {
+  opacity: 1;
+  padding-right: 10px;
 }
 .sidebar.open .logo-details .icon {
   opacity: 1;
