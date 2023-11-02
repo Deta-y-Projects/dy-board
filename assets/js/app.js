@@ -20,8 +20,6 @@ function menuBtnChange() {
 }
 
 
-
-
 new DataTable('#example', {
   columnDefs: [
       {
