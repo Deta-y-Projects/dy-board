@@ -35,6 +35,7 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #212529;
+  --shadow-default: 0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 5px 15px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* outfit-100 - latin */
