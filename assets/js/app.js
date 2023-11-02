@@ -18,3 +18,28 @@ function menuBtnChange() {
     closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
   }
 }
+
+
+
+
+new DataTable('#example', {
+  language: {
+    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/de-DE.json',
+},
+  columnDefs: [
+      {
+          targets: [0],
+          orderData: [0, 1]
+      },
+      {
+          targets: [1],
+          orderData: [1, 0]
+      },
+      {
+          targets: [4],
+          orderData: [4, 0]
+      }
+  ]
+});
+
+
