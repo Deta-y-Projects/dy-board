@@ -70,4 +70,14 @@ window.breadcrumbs = Pluto.div.child(
 Pluto.query(".sidebar").child(logo, sidemenu, )
 Pluto.query(".topBar .text ").child(seiteTitle)
 Pluto.query(".topBar").child(breadcrumbs)
-Pluto.query(".home-section .content").child( new(widgets) )
+Pluto.query(".home-section .content").child( 
+    Pluto.div.child(
+        new widgets(
+            'asd',
+            Pluto.div.class('title').text("Title")
+        ), 
+        new widgets(
+            Pluto.p.text('asd')
+        )
+    ).class('row')
+)
