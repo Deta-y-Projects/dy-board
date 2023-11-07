@@ -1,4 +1,6 @@
-import { Pluto } from "./pluto.js";
+import { PlutoComponent, Pluto } from "./pluto.js";
+import widgets from './components/widgets.js';
+
 
 window.logo = Pluto.div.child(
     Pluto.img.attr( 'src', 'assets/images/dy.png'),
@@ -48,4 +50,24 @@ window.sidemenu = Pluto.ul.child(
     ).class('profile')
 ).class('nav-list')
 
-Pluto.query(".sidebar").child(logo, sidemenu);
+// Page Title
+window.seiteTitle = Pluto.span.child(
+    'Dashboard'
+).class('text-title')
+
+// Breadcrumbs Style
+window.breadcrumbs = Pluto.div.child(
+    Pluto.ul.child(
+        Pluto.li.child(
+            Pluto.a.attr('href', '#').text('Dashboard')
+        ),
+        Pluto.li.child(
+            Pluto.a.attr('href', '#').text(' Seite')
+        )
+    )
+).class('breadcrumbs')
+
+Pluto.query(".sidebar").child(logo, sidemenu, )
+Pluto.query(".topBar .text ").child(seiteTitle)
+Pluto.query(".topBar").child(breadcrumbs)
+Pluto.query(".home-section .content").child( new(widgets) )
