@@ -43,6 +43,17 @@
   width: calc(100% - 250px);
 }
 
+.row {
+  display: grid;
+  gap: 20px;
+}
+.row.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.row.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .content {
   padding: 20px 30px;
 }
