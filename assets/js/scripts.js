@@ -67,17 +67,34 @@ window.breadcrumbs = Pluto.div.child(
     )
 ).class('breadcrumbs')
 
+
 Pluto.query(".sidebar").child(logo, sidemenu, )
 Pluto.query(".topBar .text ").child(seiteTitle)
 Pluto.query(".topBar").child(breadcrumbs)
 Pluto.query(".home-section .content").child( 
     Pluto.div.child(
         new widgets(
-            'asd',
-            Pluto.div.class('title').text("Title")
+            Pluto.div.class('title').text("grid 1")
+        )
+    ),
+    Pluto.div.child(
+        new widgets(
+            Pluto.div.class('title').text("grid 2")
         ), 
         new widgets(
-            Pluto.p.text('asd')
+            Pluto.div.class('title').text("grid 2")
         )
-    ).class('row')
+    ).class('row', 'col-2'),
+
+    Pluto.div.child(
+        new widgets(
+            Pluto.div.class('title').text("grid 3")
+        ), 
+        new widgets(
+            Pluto.div.class('title').text("grid 3")
+        ),
+        new widgets(
+            Pluto.div.class('title').text("grid 3")
+        )
+    ).class('row', 'col-3')
 )

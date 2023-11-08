@@ -12,7 +12,7 @@ export default class widgets extends PlutoComponent {
     
     
     widget_div(){
-        this._content = Pluto.div.class('contents')
+        this._content = Pluto.div.class('widgets')
         this.child(this._content)
     }
 }
