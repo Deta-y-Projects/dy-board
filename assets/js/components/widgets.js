@@ -1,4 +1,4 @@
-import { PlutoComponent, Pluto } from "../pluto.js";
+import { PlutoComponent, Pluto } from "../libraries/pluto.js";
 
 export default class widgets extends PlutoComponent {
    

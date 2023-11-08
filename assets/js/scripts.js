@@ -1,4 +1,4 @@
-import { PlutoComponent, Pluto } from "./pluto.js";
+import { PlutoComponent, Pluto } from "./libraries/pluto.js";
 import widgets from './components/widgets.js';
 
 
@@ -18,7 +18,7 @@ window.sidemenu = Pluto.ul.child(
         Pluto.span.text('Suche').class('tooltip')
     ),
     Pluto.li.child(
-        Pluto.a.attr('href', '#').child(
+        Pluto.a.attr('href', 'index2.html').child(
             Pluto.i.class('bx', 'bx-grid-alt'),
             Pluto.span.text('Dashboard').class('links_name')
         ),
@@ -37,6 +37,13 @@ window.sidemenu = Pluto.ul.child(
             Pluto.span.text('Settings').class('links_name')
         ),
         Pluto.span.text('Settings').class('tooltip')
+    ),
+    Pluto.li.child(
+        Pluto.a.attr('href', 'grid.html').child(
+            Pluto.i.class('bx', 'bx-cog'),
+            Pluto.span.text('Grid').class('links_name')
+        ),
+        Pluto.span.text('Grid').class('tooltip')
     ),
     Pluto.li.child(
         Pluto.div.child(
@@ -71,7 +78,10 @@ window.breadcrumbs = Pluto.div.child(
 Pluto.query(".sidebar").child(logo, sidemenu, )
 Pluto.query(".topBar .text ").child(seiteTitle)
 Pluto.query(".topBar").child(breadcrumbs)
-Pluto.query(".home-section .content").child( 
+
+
+// Grid Page 
+Pluto.query(".content").child( 
     Pluto.div.child(
         new widgets(
             Pluto.div.class('title').text("grid 1")
@@ -96,5 +106,23 @@ Pluto.query(".home-section .content").child(
         new widgets(
             Pluto.div.class('title').text("grid 3")
         )
-    ).class('row', 'col-3')
+    ).class('row', 'col-3'),
+
+    Pluto.div.child(
+        new widgets(
+            Pluto.div.class('title').text("grid 1-2")
+        ), 
+        new widgets(
+            Pluto.div.class('title').text("grid 1-2")
+        )
+    ).class('row', 'col-1-2'),
+
+    Pluto.div.child(
+        new widgets(
+            Pluto.div.class('title').text("grid 2-1")
+        ), 
+        new widgets(
+            Pluto.div.class('title').text("grid 2-1")
+        )
+    ).class('row', 'col-2-1')
 )

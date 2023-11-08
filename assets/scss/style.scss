@@ -50,13 +50,22 @@
 }
 .row {
     display: grid;
-    gap: 20px;
-    &.col-3 {
-        grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    @media (min-width: 768px) {
+        &.col-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &.col-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+        &.col-1-2 {
+            grid-template-columns: 2fr 1fr;
+        }
+        &.col-2-1 {
+            grid-template-columns: 1fr 2fr;
+        }
     }
-    &.col-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    
     
     
 }

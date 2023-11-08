@@ -45,13 +45,21 @@
 
 .row {
   display: grid;
-  gap: 20px;
+  grid-column-gap: 2rem;
 }
-.row.col-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.row.col-2 {
-  grid-template-columns: repeat(2, 1fr);
+@media (min-width: 768px) {
+  .row.col-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .row.col-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .row.col-1-2 {
+    grid-template-columns: 2fr 1fr;
+  }
+  .row.col-2-1 {
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .content {
